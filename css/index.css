@@ -1,7 +1,48 @@
 .hidden {
     display: none;
   }
-  #landing {
-      margin-left: 120px;
-      height: 578px;
+#landing {
+        margin-left: 80px;
+        height: 374px;
+      object-fit: cover;
+      object-position: center;
   }
+
+
+
+/* Gaya untuk form popup */
+.popup-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+  }
+  
+  /* Gaya untuk tombol submit di dalam form popup */
+  .popup-form button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Gaya untuk pesan selamat datang dan elemen website */
+  .popup-form #welcomeMessage,
+  .popup-form #website {
+    margin-top: 10px;
+  }
+  
+  /* Gaya untuk elemen website yang semula tersembunyi */
+  .hidden {
+    display: none;
+  }
+  

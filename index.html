@@ -36,10 +36,13 @@
         <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="40" width="40">
         </div>
-        <nav class=" navbar navbar-expand navbar-dark">
+        <nav class=" navbar navbar-expand navbar-light">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
-
+                <li>
+                    <img src="dist/img/revouLogo.png" alt="css haram" class="brand-image img-circle elevation-1"
+                        height="40">
+                </li>
             </ul>
 
             <!-- Right navbar links -->
@@ -61,20 +64,20 @@
             </ul>
         </nav>
         <div class="content-wrapper" style="margin-left: 0; ">
-                <div class="card-body">
-                    <form id="nameForm">
-                      <p>Enter your name:</p>
-                      <input type="text" id="nameInput" placeholder="Your Name">
-                      <button onclick="displayWelcome(event)">Submit</button>
-                    </form>
-                    <h3 id="welcomeMessage"></h3>
-                    <p id="website" class="hidden">Ini Website latihan Pertama</p>
-                </div>
-                <img id="landing" class="hidden" src="dist/img/gedung.png" alt="tikus" >
-        
+            <div class="card-body">
+                <form id="nameForm" class="popup-form">
+                    <p>Enter your name:</p>
+                    <input type="text" id="nameInput" placeholder="Your Name">
+                    <button onclick="displayWelcome(event)">Submit</button>
+                </form>
+                <h3 id="welcomeMessage"></h3>
+                <p id="website" class="hidden">Ini Website latihan Pertama</p>
+            </div>
+            <img id="landing" class="hidden" src="dist/img/rv824x286.png" alt="tikus">
+
         </div>
         <!-- /.content-wrapper -->
-        <footer class="main-footer bg-dark" style="margin-left: 0;">
+        <footer class="main-footer bg-light" style="margin-left: 0;">
             <b>Version</b>
             <div class="float-right d-none d-sm-inline-block">
                 <strong>&copy;Created by RevoU</a>.</strong>
@@ -87,17 +90,36 @@
 
     <!-- ./wrapper -->
     <script>
-        function displayWelcome(event) {
-          event.preventDefault(); // Prevent form submission
-          var name = document.getElementById('nameInput').value;
-          var welcomeSpeech = "Hi " + name + "! Welcome to our website!";
-          document.getElementById('welcomeMessage').textContent = welcomeSpeech ;
-          document.getElementById('nameForm').classList.add('hidden');
-          document.getElementById('website').classList.remove('hidden');
-          document.getElementById('landing').classList.remove('hidden');
+        // Mendapatkan elemen form popup
+        var formPopup = document.getElementById("nameForm");
 
+        // Menampilkan form popup saat halaman dimuat
+        formPopup.classList.remove("hidden");
+
+        // Fungsi untuk menampilkan pesan selamat datang
+        function displayWelcome(event) {
+            event.preventDefault();
+
+            var nameInput = document.getElementById("nameInput");
+            var name = nameInput.value.trim();
+
+            // Validasi nama
+            if (name === "") {
+                alert("Please enter your name.");
+                nameInput.focus();
+                return;
+            }
+
+            // Tampilkan pesan selamat datang dan elemen lainnya
+            document.getElementById("welcomeMessage").textContent = "Welcome, " + name + "!";
+            document.getElementById("nameForm").classList.add("hidden");
+            document.getElementById("website").classList.remove("hidden");
+            document.getElementById("landing").classList.remove("hidden");
         }
-      </script>
+
+
+
+    </script>
     <!-- jQuery -->
     <script src="plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
