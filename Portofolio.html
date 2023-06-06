@@ -28,6 +28,35 @@
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+    <style>
+    /* Aturan CSS lainnya di sini */
+
+    @media (max-width: 768px) {
+        /* Media queries untuk lebar layar kurang dari atau sama dengan 768px */
+        .card-body {
+            margin: 10px;
+        }
+
+        .col-4 {
+            width: 100%;
+        }
+
+        /* Aturan CSS lainnya untuk tampilan yang lebih kecil */
+    }
+
+    @media (min-width: 769px) and (max-width: 1200px) {
+        /* Media queries untuk lebar layar antara 769px dan 1200px */
+        .card-body {
+            margin: 20px;
+        }
+
+        /* Aturan CSS lainnya untuk tampilan yang sedang */
+    }
+
+    /* Aturan CSS lainnya untuk tampilan yang lebih besar */
+</style>
+
+
 </head>
 
 <body>
@@ -63,63 +92,85 @@
 
             </ul>
         </nav>
-        <div class="content-wrapper" style="margin-left: 0; ">
-            <img src="./dist/img/rv824x286.png" alt="tikus" style="margin-bottom: 20px; width: 100%; max-height: 400px;">
-            <div class="container-fluid ">
-                <div class="card-body">
-                    <h3 class="card-header post brand-text font-weight-light" style="margin: 20px;"> Largest Live Online Learning Community</h3>
-                    <div class="post justify-content-center" style="margin-left: 40px; margin-right: 20px;">
-                        Recession Proof your Career by learning the most valuable digital skills from the Best in the Industry. 100% Live Online Classes, Career Mentors, and Lifelong Community support to unlock endless opportunities.
-                    </div>
-                </div>
-            </div>
+        <div class="content-wrapper ml-0" style="background-image: url(https://assets-global.website-files.com/61af164800e38c4f53c60b4e/62fdf7c9b752cb1e870c4f90_Community%20Home%20BG.webp); background-size:cover; background-position:center; ">
             <div class="container-fluid">
-                <div class="card-body" >
-                    <h3 class="card-header post brand-text font-weight-light" style="margin: 20px;"> Headquarters</h3>
-                    <div class="row post" style="margin: 40px; height: 180px;">
-                        <div class="col-4" style="width: fit-content;">
-                            <div class="card-body">
-                                <div class="image" id="headquarter-img">
-                                    <img src="dist/img/bebek.jpg" alt="Aku Kucing" height="100"
-                                        class="img-circle elevation-4" style="margin-left: 60px;" data-widget="brand-image">
-                                </div>
-                                    <label class="aria-label" style="margin-left: 85px; margin-top: 20px;">Jakarta</label>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card-body ">
-                                <div class="image" id="headquarter-img">
-                                    <img src="dist/img/ged.jpg" alt="Aku Kucing" height="100"
-                                        class="img-circle elevation-4" style="margin-left: 60px;" data-widget="brand-image">
-                                </div>
-                                <label class="aria-label" style="margin-left: 90px; margin-top: 20px;">Bekasi</label>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card-body">
-                                <div class="image" id="headquarter-img">
-                                    <img src="dist/img/bebek.jpg" alt="Aku Kucing" height="100"
-                                        class="img-circle elevation-4" style="margin-left: 100px;" data-widget="brand-image">
-                                </div>
-                                    <label class="aria-label" style="margin-left: 125px; margin-top: 20px;">Depok</label>
-                            </div>
-                        </div>
+                <div class="card-body">
+                    <div class="post brand-text justify-content-center mb-0" style="font-size: 65px; margin-left: 38px; ">
+                        <strong>Evolve your career <br> and build skills.</strong>
+                        <br>
+                        <span class="brand-text bg-dark">Together </span>
                     </div>
                 </div>
-
+                <div class="card-body">
+                    <div class="post brand-text justify-content-center"
+                        style="font-size: 20px; margin-left: 40px; margin-right: 20px;">
+                        <span class="brand-image">RevoU Community is a go-to platform where you can access quality</span>
+                        <br> content and programs designed to help you advance in your
+                        <br> and Lifelong Community support to unlock
+                        professional career.
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- /.content-wrapper -->
-        <footer class="main-footer bg-dark" style="margin-left: 0;">
-            <b>Version</b>
-            <div class="float-right d-none d-sm-inline-block">
-                <strong>&copy;Created by RevoU</a>.</strong>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card-body ml-3 mt-3" style="text-align: center; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); border-radius: 2%;">
+                        <img src="https://assets-global.website-files.com/61af164800e38c4f53c60b4e/63049500432d8bf170784b18_Untitled%20design%20(5).webp" alt="...">
+                        <div class="brand-text ml-3" style="font-size: 30px;">
+                            <strong class="mt-3">Enrich your connection, meet up offline with fellow alumni near you</strong>
+                        </div>
+                        <p class="ml-3 mt-3">Our alumni are all across Indonesia. Connect with RevoU alumni and build up a valuable network across a wide range of fields.
+                            we strongly recommend that you give a visit to our comunity
+                        </p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card-body ml-3 mt-3" style="text-align: center; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); border-radius: 2%;">
+                        <img src="https://assets-global.website-files.com/61af164800e38c4f53c60b4e/62ff6197d858272bae3cf175_Untitled%20design%20(2).webp" alt="...">
+                        <div class="brand-text ml-3" style="font-size: 30px;">
+                            <strong class="ml-3"mt-3>Continue your lifelong <br> learning with RevoU</strong>
+                        </div>
+                        <p class="ml-3 mt-3">Take advantage of the advanced classes we designed specifically for our alumni.we provide opportunities to participate in exclusive alumni events that will enhance your knowledge and skills.</p>
+                    </div>
+                </div>  
             </div>
-        </footer>
-
-        <!-- Control Sidebar -->
-
-    </div>
+            
+        </div>
+        <div class=" card mb-0">
+                                        <div class="text mt-3"
+                                            style="display: flex; justify-content: center; position: relative; z-index: 0;">
+                                            <span style="font-size: 30px;">Our graduates work for Indonesia <br> and
+                                                Southeast Asia's top companies</span>
+                                        </div>
+                                        <div class="card-body" style="display: inline-block; z-index: 1; text-align: center;">
+                                            <div style="display: inline-block;">
+                                                <img src="https://assets-global.website-files.com/61af164800e38cf1b6c60b55/63909f04e3703e25374da45d_bca.png" alt="" height="46px;" style="margin: 20px;">
+                                                <img src="https://assets-global.website-files.com/61af164800e38cf1b6c60b55/63909f6bfefe9d4100471912_Mandiri%20logo.png" alt="" height="46px;" style="margin: 20px;">
+                                                <img src="https://assets-global.website-files.com/61af164800e38cf1b6c60b55/63909fa9423aac754fe7fad1_Telkom.png" alt="" height="46px;" style="margin: 20px;">
+                                                <img src="https://assets-global.website-files.com/61af164800e38cf1b6c60b55/6390a00f5e921fd53c73f43d_Nielsen_logo.png" alt="" height="46px;" style="margin: 20px;">
+                                                <img src="https://assets-global.website-files.com/61af164800e38cf1b6c60b55/6390a047e3703e118e4db98c_citibank.png" alt="" height="46px;" style="margin: 20px;">
+                                                <img src="https://assets-global.website-files.com/61af164800e38cf1b6c60b55/6390a07c8c80a6a7ecc4b478_DBS.png" alt="" height="46px;" style="margin: 20px;">
+                                            </div>
+                                            <div style="display: inline-block;">
+                                                <img src="https://assets-global.website-files.com/61af164800e38cf1b6c60b55/6390a0ac3e8c0e5e4c9f4887_Lotte.png" alt="" height="46px;" style="margin: 20px;">
+                                                <img src="https://assets-global.website-files.com/61af164800e38cf1b6c60b55/61d2def2b9dbe50805c81416_smartfren.svg" alt="" height="46px;" style="margin: 20px;">
+                                                <img src="https://assets-global.website-files.com/61af164800e38cf1b6c60b55/6390a1491279b30c1a0ec84e_sinarmas.png" alt="" height="46px;" style="margin: 20px;">
+                                                <img src="https://assets-global.website-files.com/61af164800e38cf1b6c60b55/6390a6305c0b4a8353c65f8e_detik.png" alt="" height="46px;" style="margin: 20px;">
+                                                <img src="https://assets-global.website-files.com/61af164800e38cf1b6c60b55/61d2df94b55dd8ee96c6940d_IDN_Media_Logo.png" alt="" height="46px;" style="margin: 20px;">
+                                                <img src="https://assets-global.website-files.com/61af164800e38cf1b6c60b55/6390a6e4e1e51021373432d0_image%20873.png" alt="" height="46px;" style="margin: 20px;">
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    <footer class="main-footer bg-light" style="margin-left: 0;">
+                                        <b>Version</b>
+                                        <div class="float-right d-none d-sm-inline-block">
+                                            <strong>&copy;Created by RevoU</a>.</strong>
+                                        </div>
+                                    </footer>
+                                </div>
 
     <!-- ./wrapper -->
 

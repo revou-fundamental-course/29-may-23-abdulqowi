@@ -28,6 +28,30 @@
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
     <link rel="stylesheet" href="./css/index.css">
+    <style>
+        /* CSS lainnya */
+    
+        @media (max-width: 768px) {
+            /* Aturan CSS untuk lebar layar kurang dari atau sama dengan 768px */
+            .card-body {
+                margin: 10px;
+            }
+    
+            .col-4 {
+                width: 100%;
+            }
+        }
+    
+        @media (min-width: 769px) and (max-width: 1200px) {
+            /* Aturan CSS untuk lebar layar antara 769px dan 1200px */
+            .card-body {
+                margin: 20px;
+            }
+        }
+    
+        /* CSS lainnya */
+    </style>
+    
 </head>
 
 <body>
@@ -73,8 +97,39 @@
                 <h3 id="welcomeMessage"></h3>
                 <p id="website" class="hidden">Ini Website latihan Pertama</p>
             </div>
-            <img id="landing" class="hidden" src="dist/img/rv824x286.png" alt="tikus">
-
+            <img id="landing" src="dist/img/rv824x286.png" alt="tikus">
+            <div class="card-body" >
+                <h3 class="card-header post brand-text font-weight-light" style="margin: 20px;"> Headquarters</h3>
+                <div class="row post" style="margin: 40px; height: 180px;">
+                    <div class="col-4" style="width: fit-content;">
+                        <div class="card-body">
+                            <div class="image" id="headquarter-img">
+                                <img src="dist/img/bebek.jpg" alt="Aku Kucing" height="100"
+                                    class="img-circle elevation-4" style="margin-left: 60px;" data-widget="brand-image">
+                            </div>
+                                <label class="aria-label" style="margin-left: 85px; margin-top: 20px;">Jakarta</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card-body ">
+                            <div class="image" id="headquarter-img">
+                                <img src="dist/img/ged.jpg" alt="Aku Kucing" height="100"
+                                    class="img-circle elevation-4" style="margin-left: 60px;" data-widget="brand-image">
+                            </div>
+                            <label class="aria-label" style="margin-left: 90px; margin-top: 20px;">Bekasi</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card-body">
+                            <div class="image" id="headquarter-img">
+                                <img src="dist/img/bebek.jpg" alt="Aku Kucing" height="100"
+                                    class="img-circle elevation-4" style="margin-left: 100px;" data-widget="brand-image">
+                            </div>
+                                <label class="aria-label" style="margin-left: 125px; margin-top: 20px;">Depok</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer bg-light" style="margin-left: 0;">
