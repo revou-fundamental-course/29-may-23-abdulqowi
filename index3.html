@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="style.css">
   <style>
     /* CSS lainnya */
 
@@ -48,6 +49,15 @@
             margin: 20px;
         }
     }
+
+    .card-transition {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+    .card-visible {
+      opacity: 1;
+    }
+    
 
     /* CSS lainnya */
 </style>
@@ -86,65 +96,65 @@
 
       </ul>
   </nav>
-    <div class="content-wrapper" style="margin-left: 0; ">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-lg-5 ml-3">
-            <div class="card mt-3">
-              <div class="card-body">
-                <h3 class="card-header brand-text font-weight-light">Contact Us</h3>
-                <form id="contactForm" enctype="multipart/form-data">
-                  <div class="form-group">
-                    <label for="title">Nama <span class="text-danger">*</span></label>
-                    <input name="title" id="title" placeholder="Masukkan Nama" type="text" class="form-control">
-                    <div class="invalid-feedback" role="alert"></div>
-                  </div>
-                  <div class="form-group">
-                    <label for="date">Tanggal Lahir</label>
-                    <input name="date" id="date" type="date" class="form-control">
-                    <div class="invalid-feedback" role="alert"></div>
-                  </div>
-                  <div class="form-group">
-                    <label for="category">Jenis Kelamin: <span class="text-danger">*</span></label>
-                    <div class="float-right">
-                      <div class="custom-control custom-radio custom-control-inline mr-4">
-                        <input type="radio" class="custom-control-input" name="gender" id="man">
-                        <label class="custom-control-label" for="man">Laki-laki</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" name="gender" id="woman">
-                        <label class="custom-control-label" for="woman">Wanita</label>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="form-group">
-                    <label for="body">Message <span class="text-danger">*</span></label>
-                    <textarea name="body" id="body" rows="4" class="form-control"></textarea>
-                    <div class="invalid-feedback" role="alert"></div>
-                  </div>
-                  <button type="submit" class="btn btn-sm btn-secondary float-right">Simpan</button>
-                </form>
+  <div class="content-wrapper" style="margin-left: 0;">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="card card-body" id="messageCard" style="border-radius: 8px; margin-bottom: 20px;">
+            <form id="contactForm" enctype="multipart/form-data">
+              <h3 class="card-header brand-text font-weight-light">Contact Us</h3>
+              <div class="form-group">
+                <label for="title">Nama <span class="text-danger">*</span></label>
+                <input name="title" id="title" placeholder="Masukkan Nama" type="text" class="form-control">
+                <div class="invalid-feedback" role="alert"></div>
               </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div id="outputCard" class="card card-secondary mt-3" style="display: none;">
-              <div class="card-body">
-                <p id="nameOutput"></p>
-                <p id="dateOutput"></p>
-                <p id="genderOutput"></p>
-                <p id="messageOutput"></p>
+              <div class="form-group">
+                <label for="date">Tanggal Lahir <span class="text-danger">*</span></label>
+                <input name="date" id="date" type="date" class="form-control">
+                <div class="invalid-feedback" role="alert"></div>
               </div>
-            </div>
-            
+              <div class="form-group">
+                <label for="category">Jenis Kelamin: <span class="text-danger">*</span></label>
+                <div class="float-right">
+                  <div class="custom-control custom-radio custom-control-inline mr-4">
+                    <input type="radio" class="custom-control-input" name="gender" id="man">
+                    <label class="custom-control-label" for="man">Laki-laki</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" name="gender" id="woman">
+                    <label class="custom-control-label" for="woman">Wanita</label>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <label for="body">Message <span class="text-danger">*</span></label>
+                <textarea name="body" id="body" rows="4" class="form-control"></textarea>
+                <div class="invalid-feedback" role="alert"></div>
+              </div>
+              <button type="submit" class="btn btn-sm btn-secondary float-right">Simpan</button>
+            </form>
           </div>
-          <script src="./js/script.js"></script>
         </div>
       </div>
-
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div id="outputCard" class="card-body align-items-center hidden" style="border-radius: 8px; margin-bottom: 20px; margin-top: 100px; background-color: #f8f9fa; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <div class="card-header" style="background-color: #e9ecef; text-align: center;">
+              <h5 class="card-title brand-text mb-0">Terima Kasih</h5>
+            </div>
+            <div class="card-body">
+              <p id="nameOutput" class="mb-2"></p>
+              <p id="dateOutput" class="mb-2"></p>
+              <p id="genderOutput" class="mb-2"></p>
+              <p id="messageOutput" class="mb-0"></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  
     <!-- /.content-wrapper -->
     <footer class="main-footer bg-light" style="margin-left: 0;">
       <b>Version</b>
@@ -160,6 +170,7 @@
   <!-- ./wrapper -->
 
   <!-- jQuery -->
+  <script src="./js/script.js"></script>
   <script src="plugins/jquery/jquery.min.js"></script>
   <!-- jQuery UI 1.11.4 -->
   <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
